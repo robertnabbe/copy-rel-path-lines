@@ -1,0 +1,37 @@
+{
+  "name": "copy-rel-path-lines",
+  "displayname": "Copy Relative Path + Lines",
+  "description": "Copies relative path of current file + cursor position (or selection) to clipboard.",
+  "version": "0.0.1",
+  "publisher": "local",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robertnabbe/copy-rel-path-lines"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["other"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copyRelPathLines",
+        "title": "Copy Rel Path@Lines"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "copyRelPathLines",
+        "key": "cmd+; cmd+l",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "files": [
+    "extension.js",
+    "package.json",
+    "README.md"
+  ]
+}
