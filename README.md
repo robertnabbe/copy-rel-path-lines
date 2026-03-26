@@ -22,6 +22,8 @@ Binds to chord `CMD+;L`.
 
 ### Install
 
+Pull down repo. From repo root, run:
+
 VSC
 
 ```bash
