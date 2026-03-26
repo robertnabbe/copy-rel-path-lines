@@ -13,3 +13,15 @@ Example:
 Binds to chord `CMD+;L`.
 
 ### Install
+
+VSC
+
+```bash
+code --install-extension ./bin/copy-path-lines.vsix
+```
+
+Cursor
+
+```bash
+cursor --install-extension ./bin/copy-path-lines.vsix
+```
