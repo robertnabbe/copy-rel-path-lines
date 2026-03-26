@@ -17,11 +17,11 @@ Binds to chord `CMD+;L`.
 VSC
 
 ```bash
-code --install-extension ./bin/copy-path-lines.vsix
+code --install-extension ./bin/copy-path-lines-0.0.1.vsix
 ```
 
 Cursor
 
 ```bash
-cursor --install-extension ./bin/copy-path-lines.vsix
+cursor --install-extension ./bin/copy-path-lines-0.0.1.vsix
 ```

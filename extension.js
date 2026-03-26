@@ -1,20 +1,20 @@
 const vscode = require('vscode');
 
-exports.activate = (ctx) => {
+exports.activate = ctx => {
   ctx.subscriptions.push(
     vscode.commands.registerCommand('copyRelPathLines', () => {
       const e = vscode.window.activeTextEditor;
       if (!e) return;
 
-      const rel = vscode.workspace.asRelativePath(e.document.uri);
-      const s = e.selection;
+      const relPath = vscode.workspace.asRelativePath(e.document.uri);
+      const selection = e.selection;
 
-      const start = s.start.line + 1;
-      const end = s.end.line + 1;
+      const start = selection.start.line + 1;
+      const end = selection.end.line + 1;
 
-      vscode.env.clipboard.writeText(
-        start === end ? `@${rel}@${start}` : `${rel}@${start}-${end}`
-      );
+      const output = `@${relPath}@${start}`;
+
+      vscode.env.clipboard.writeText(start === end ? output : `${output}-${end}`);
     })
   );
 };
